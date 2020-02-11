@@ -11,13 +11,10 @@ package com.wd.health.aaa;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.wd.health.R;
 
-@Route(path = "/main/sosuo")
 public class SearchActivity extends AppCompatActivity {
 
     private TextView mTextView;
