@@ -22,9 +22,11 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa);
         MySearchHand mySearchHand = findViewById(R.id.myView);
         final MyFloatView myFloatView = findViewById(R.id.text);
+        
         mTextView = findViewById(R.id.t_view);
         mySearchHand.setOnBackCilckListener(new MySearchHand.OnBackCilckListener() {
             @Override
