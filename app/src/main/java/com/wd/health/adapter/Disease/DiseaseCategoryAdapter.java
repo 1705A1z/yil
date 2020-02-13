@@ -1,6 +1,7 @@
 package com.wd.health.adapter.Disease;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.wd.health.R;
 import com.wd.health.bean.DiseaseCategoryBean;
+import com.wd.health.view.activity.PatientActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +37,14 @@ public class DiseaseCategoryAdapter extends RecyclerView.Adapter<DiseaseCategory
     public void onBindViewHolder(@NonNull MyAdapter myAdapter, int i) {
         DiseaseCategoryBean.ResultBean resultBean = list.get(i);
          myAdapter.name.setText(resultBean.getName());
-
+        myAdapter.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, PatientActivity.class);
+                intent.getIntExtra("id",resultBean.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -52,8 +52,17 @@ public class PatientBean {
         private long createTime;
         private int diseaseCategoryId;
         private int id;
+        private String westernMedicineTreatment;
         private String pathology;
         private String symptom;
+
+        public String getWesternMedicineTreatment() {
+            return westernMedicineTreatment;
+        }
+
+        public void setWesternMedicineTreatment(String westernMedicineTreatment) {
+            this.westernMedicineTreatment = westernMedicineTreatment;
+        }
 
         public String getBenefitTaboo() {
             return benefitTaboo;

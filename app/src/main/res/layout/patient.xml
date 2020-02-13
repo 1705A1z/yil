@@ -11,17 +11,72 @@
     />
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_200"
-        android:layout_marginTop="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
         android:textSize="@dimen/dp_13"
         android:textColor="#57E2BB"
         android:text="[病理]"
         />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_200"
-        android:textSize="@dimen/sp_20"
-        android:id="@+id/pa_"
-
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_15"
+        android:id="@+id/pathology"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textSize="@dimen/dp_13"
+        android:textColor="#57E2BB"
+        android:text="[症状]"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_15"
+        android:id="@+id/symptom"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textSize="@dimen/dp_13"
+        android:textColor="#57E2BB"
+        android:text="[宜于忌]"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_15"
+        android:id="@+id/benefitTaboo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textSize="@dimen/dp_13"
+        android:textColor="#57E2BB"
+        android:text="[西药治疗]"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_15"
+        android:id="@+id/wmt"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textSize="@dimen/dp_13"
+        android:textColor="#57E2BB"
+        android:text="[中药治疗]"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_15"
+        android:id="@+id/cmt"
         />
 </LinearLayout>
