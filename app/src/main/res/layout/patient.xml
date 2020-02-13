@@ -22,5 +22,6 @@
         android:layout_height="@dimen/dp_200"
         android:textSize="@dimen/sp_20"
         android:id="@+id/pa_"
+        
         />
 </LinearLayout>
