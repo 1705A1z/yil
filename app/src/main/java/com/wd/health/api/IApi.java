@@ -9,6 +9,7 @@ import com.wd.health.bean.HealthBean;
 import com.wd.health.bean.JianKangBean;
 import com.wd.health.bean.KeListBean;
 import com.wd.health.bean.LoginBean;
+import com.wd.health.bean.PatientBean;
 import com.wd.health.bean.SymptomBean;
 
 import java.util.Map;
@@ -53,4 +54,8 @@ public interface IApi {
     //健康讲堂类目
     @GET("user/video/v1/findVideoCategoryList")
     Observable<JianKangBean> getJianKang();
+
+    //病友圈详情
+    @GET("share/knowledgeBase/v1/findDiseaseKnowledge")
+    Observable<PatientBean>getPatien(int id);
 }
