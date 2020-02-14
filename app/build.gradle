@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.wd.health"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -66,4 +66,7 @@ dependencies {
     implementation 'me.relex:photodraweeview:1.1.2'
     //轮播图
     implementation 'com.xuezj.cardbanner:cardbanner:2.0.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation project(':LayoutManagerGroup')
 }
