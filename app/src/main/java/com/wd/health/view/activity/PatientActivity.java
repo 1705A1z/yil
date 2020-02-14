@@ -48,6 +48,7 @@ public class PatientActivity extends BaseActivity<PatientPresenter> implements P
     @Override
     protected PatientPresenter ProvidePresenter() {
         return new PatientPresenter();
+        
     }
 
     @Override
