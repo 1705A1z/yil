@@ -9,6 +9,7 @@ import com.wd.health.bean.HealthBean;
 import com.wd.health.bean.JianKangBean;
 import com.wd.health.bean.KeListBean;
 import com.wd.health.bean.LoginBean;
+import com.wd.health.bean.PatientBean;
 import com.wd.health.bean.SymptomBean;
 
 import java.util.Map;
@@ -27,30 +28,40 @@ public interface IApi {
 
     //根据科室查询
     @GET("share/knowledgeBase/v1/findDepartment")
-     Observable<DepartmentBean> getDepart();
+    Observable<DepartmentBean> getDepart();
 
     @GET("share/knowledgeBase/v1/findDiseaseCategory")
-    Observable<DiseaseCategoryBean> getDiseaseCategory(@Query("departmentId")int depatid);
+    Observable<DiseaseCategoryBean> getDiseaseCategory(@Query("departmentId") int depatid);
 
     //banner轮播
-     @GET("share/v1/bannersShow")
-     Observable<BannerBean> getBanner();
+    @GET("share/v1/bannersShow")
+    Observable<BannerBean> getBanner();
+
     //症状
     @GET("share/knowledgeBase/v1/findDiseaseCategory")
     Observable<SymptomBean> getSymptom();
+
     //常见药瓶
     @GET("share/knowledgeBase/v1/findDiseaseCategory")
-    Observable<DrugBean> getDrug(@Query("drugsCategoryId") int drugsCategoryId,@Query("page") int page,@Query("count") int count);
+    Observable<DrugBean> getDrug(@Query("drugsCategoryId") int drugsCategoryId, @Query("page") int page, @Query("count") int count);
+
     //查询科室列表
     @GET("share/knowledgeBase/v1/findDepartment")
     Observable<KeListBean> getKeLian();
+
     //查询健康资讯板块
     @GET("share/information/v1/findInformationPlateList")
     Observable<HealthBean> getHealthBean();
+
     //根据资讯板块查询资讯列表
     @GET("share/information/v1/findInformationList")
-    Observable<ConsultingListBean> getConsultingList(int plateId,int page, int count);
+    Observable<ConsultingListBean> getConsultingList(int plateId, int page, int count);
+
     //健康讲堂类目
     @GET("user/video/v1/findVideoCategoryList")
     Observable<JianKangBean> getJianKang();
+
+    //病友圈详情
+    @GET("share/knowledgeBase/v1/findDiseaseKnowledge")
+    Observable<PatientBean> getPatien(@Query("id") int Id);
 }
