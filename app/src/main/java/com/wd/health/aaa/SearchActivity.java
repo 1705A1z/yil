@@ -18,7 +18,6 @@ import com.wd.health.R;
 public class SearchActivity extends AppCompatActivity {
 
     private TextView mTextView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +25,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa);
         MySearchHand mySearchHand = findViewById(R.id.myView);
         final MyFloatView myFloatView = findViewById(R.id.text);
-        
+
         mTextView = findViewById(R.id.t_view);
         mySearchHand.setOnBackCilckListener(new MySearchHand.OnBackCilckListener() {
             @Override
