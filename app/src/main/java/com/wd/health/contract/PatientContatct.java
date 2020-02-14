@@ -15,7 +15,7 @@ public interface PatientContatct {
         void PatientErorr(String mag);
     }
     interface IModel{
-        void getPatient(int id,PatientCallBack patientCallBack);
+        void getPatient(int Id,PatientCallBack patientCallBack);
 
         interface PatientCallBack{
             void PatientSuccess(PatientBean patientBean);
@@ -23,6 +23,6 @@ public interface PatientContatct {
         }
     }
     interface IPresenter{
-        void getPatient(int id);
+        void getPatient(int Id);
     }
 }

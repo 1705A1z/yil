@@ -15,8 +15,8 @@ public class PatientPresenter extends BasePresenter<PatientContatct.IView>implem
     }
 
     @Override
-    public void getPatient(int id) {
-      model.getPatient(id, new PatientContatct.IModel.PatientCallBack() {
+    public void getPatient(int Id) {
+      model.getPatient(Id, new PatientContatct.IModel.PatientCallBack() {
           @Override
           public void PatientSuccess(PatientBean patientBean) {
               getView().PatientSuccess(patientBean);
