@@ -61,7 +61,7 @@ public interface IApi {
     @GET("user/video/v1/findVideoCategoryList")
     Observable<JianKangBean> getJianKang();
 
-    //病友圈详情
+    //查询常见病症详情
     @GET("share/knowledgeBase/v1/findDiseaseKnowledge")
     Observable<PatientBean> getPatien(@Query("id") int Id);
 }

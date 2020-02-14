@@ -1,6 +1,7 @@
 package com.wd.health.view.activity;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -22,8 +23,9 @@ public class PatientActivity extends BaseActivity<PatientPresenter> implements P
 
     @Override
     protected void initData() {
+
         Intent intent = this.getIntent();
-        int id = intent.getIntExtra("id",0);
+        int id = intent.getIntExtra("id", 0);
         Log.d(TAG, "initData: " + id);
         mPresenter.getPatient(id);
 
@@ -50,7 +52,7 @@ public class PatientActivity extends BaseActivity<PatientPresenter> implements P
 
     @Override
     public void PatientSuccess(PatientBean patientBean) {
-      List<PatientBean.ResultBean>   result = (List<PatientBean.ResultBean>) patientBean.getResult();
+        List<PatientBean.ResultBean> result = (List<PatientBean.ResultBean>) patientBean.getResult();
         PatientAdapter patientAdapter = new PatientAdapter(this, result);
         rlv.setAdapter(patientAdapter);
 

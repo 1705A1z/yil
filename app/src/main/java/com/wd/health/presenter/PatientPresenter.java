@@ -7,6 +7,7 @@ import com.wd.health.model.PatientModel;
 
 public class PatientPresenter extends BasePresenter<PatientContatct.IView>implements PatientContatct.IPresenter {
 
+
     private PatientModel model;
 
     @Override
@@ -16,16 +17,16 @@ public class PatientPresenter extends BasePresenter<PatientContatct.IView>implem
 
     @Override
     public void getPatient(int Id) {
-      model.getPatient(Id, new PatientContatct.IModel.PatientCallBack() {
-          @Override
-          public void PatientSuccess(PatientBean patientBean) {
-              getView().PatientSuccess(patientBean);
-          }
+       model.getPatient(Id, new PatientContatct.IModel.PatientCallBack() {
+           @Override
+           public void PatientSuccess(PatientBean patientBean) {
+               getView().PatientSuccess(patientBean);
+           }
 
-          @Override
-          public void PatientErorr(String mag) {
+           @Override
+           public void PatientErorr(String mag) {
               getView().PatientErorr(mag);
-          }
-      });
+           }
+       });
     }
 }
