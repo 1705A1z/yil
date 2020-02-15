@@ -27,6 +27,8 @@ import com.xuezj.cardbanner.imageloader.CardImageLoader;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class ShowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     ArrayList list= new ArrayList();
     final  static int TYPE=0;
