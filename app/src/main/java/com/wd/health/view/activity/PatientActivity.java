@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 
+
 import com.wd.health.R;
 import com.wd.health.adapter.PatientAdapter;
 import com.wd.health.base.BaseActivity;
@@ -48,7 +49,7 @@ public class PatientActivity extends BaseActivity<PatientPresenter> implements P
     @Override
     protected PatientPresenter ProvidePresenter() {
         return new PatientPresenter();
-        
+
     }
 
     @Override
