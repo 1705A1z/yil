@@ -28,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(new ShowFragment());
         fragments.add(new CircleOfFriendsFragment());
-        fragments.add(new MyFragment());
+//        fragments.add(new MyFragment());
         pager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int i) {
