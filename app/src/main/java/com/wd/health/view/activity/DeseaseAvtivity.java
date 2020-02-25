@@ -1,10 +1,8 @@
 package com.wd.health.view.activity;
 
-import android.os.Bundle;
 import android.widget.TextView;
 
 import com.wd.health.R;
-import com.wd.health.base.BaseActivity;
 import com.wd.health.base.BaseFragment;
 import com.wd.health.bean.BannerBean;
 import com.wd.health.bean.ConsultingListBean;
@@ -37,7 +35,6 @@ import com.wd.health.presenter.BannerPresenter;
 import com.wd.health.presenter.HomePresenter;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class DeseaseAvtivity  extends BaseFragment< BannerPresenter> implements BannerContract.IView {
 
@@ -57,7 +54,7 @@ public class DeseaseAvtivity  extends BaseFragment< BannerPresenter> implements 
     private String id;
 
     @Override
-    protected HomePresenter providePresenter() {
+    protected BannerPresenter providePresenter() {
         return new HomePresenter();
     }
 
@@ -78,26 +75,25 @@ public class DeseaseAvtivity  extends BaseFragment< BannerPresenter> implements 
         return R.layout.activity_desease_avtivity;
     }
 
-/*
-* 症状symptom
-* 病理benefitTaboo
-* 宜pathology
-* 中chineseMedicineTreatment
-*
-* */
-        String benefitTaboo = data.getResult().getBenefitTaboo();
+    /*
+     * 症状symptom
+     * 病理benefitTaboo
+     * 宜pathology
+     * 中chineseMedicineTreatment
+     *
+     * */
+    String benefitTaboo = data.getResult().getBenefitTaboo();
         textDeseaseYi.setText(benefitTaboo);
 
-        String symptom = data.getResult().getSymptom();
+    String symptom = data.getResult().getSymptom();
         textDeseaseZheng.setText(symptom);
 
-        String pathology = data.getResult().getPathology();
+    String pathology = data.getResult().getPathology();
         textDeseaseBing.setText(pathology);
 
-        String chineseMedicineTreatment = data.getResult().getChineseMedicineTreatment();
+    String chineseMedicineTreatment = data.getResult().getChineseMedicineTreatment();
         textDeseaseZhong.setText(chineseMedicineTreatment);
-
-    }
+}
 
 
 
@@ -139,7 +135,7 @@ public class DeseaseAvtivity  extends BaseFragment< BannerPresenter> implements 
 
     @Override
     public void onDrugsyouSuccess(DrugsyouBean data) {
-        
+
     }
 
     @Override
