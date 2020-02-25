@@ -5,6 +5,7 @@ import com.wd.health.bean.DiseaseCategoryBean;
 import com.wd.health.bean.BannerBean;
 import com.wd.health.bean.ConsultingListBean;
 import com.wd.health.bean.DrugBean;
+import com.wd.health.bean.DrugsBean;
 import com.wd.health.bean.HealthBean;
 import com.wd.health.bean.JianKangBean;
 import com.wd.health.bean.KeListBean;
@@ -64,4 +65,7 @@ public interface IApi {
     //查询常见病症详情
     @GET("share/knowledgeBase/v1/findDiseaseKnowledge")
     Observable<PatientBean> getPatien(@Query("id") int Id);
+
+    @GET("share/knowledgeBase/v1/findDrugsCategoryList")
+    Observable<DrugsBean> getDrugs();
 }
