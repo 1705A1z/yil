@@ -21,13 +21,15 @@ public class PatientActivity extends BaseActivity<PatientPresenter> implements P
 
     private static final String TAG = "PatientActivity";
     private RecyclerView rlv;
+    private LinearLayoutManager linearLayoutManager;
+
 
     @Override
     protected void initData() {
 
         Intent intent = this.getIntent();
-        int id = intent.getIntExtra("id", 0);
-        Log.d(TAG, "initData: " + id);
+        int id = intent.getIntExtra("id1", 1);
+        Log.d(TAG, "aaaa: " + id);
         mPresenter.getPatient(id);
 
 
@@ -35,15 +37,16 @@ public class PatientActivity extends BaseActivity<PatientPresenter> implements P
 
     @Override
     protected void initView() {
-        rlv = (RecyclerView) findViewById(R.id.rlv);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        rlv = (RecyclerView) findViewById(R.id.rlv_path);
+        linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        rlv.setLayoutManager(linearLayoutManager);
+
     }
 
     @Override
     protected int provideLayoutId() {
         return R.layout.activity_patient;
+
     }
 
     @Override
@@ -54,8 +57,10 @@ public class PatientActivity extends BaseActivity<PatientPresenter> implements P
 
     @Override
     public void PatientSuccess(PatientBean patientBean) {
+        Log.d(TAG, "PatientSuccess: "+patientBean.getResult().getBenefitTaboo());
         List<PatientBean.ResultBean> result = (List<PatientBean.ResultBean>) patientBean.getResult();
         PatientAdapter patientAdapter = new PatientAdapter(this, result);
+        rlv.setLayoutManager(linearLayoutManager);
         rlv.setAdapter(patientAdapter);
 
     }

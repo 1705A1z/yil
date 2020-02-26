@@ -6,6 +6,7 @@ import com.wd.health.bean.BannerBean;
 import com.wd.health.bean.ConsultingListBean;
 import com.wd.health.bean.DrugBean;
 import com.wd.health.bean.DrugsBean;
+import com.wd.health.bean.DrugssBean;
 import com.wd.health.bean.HealthBean;
 import com.wd.health.bean.JianKangBean;
 import com.wd.health.bean.KeListBean;
@@ -66,6 +67,11 @@ public interface IApi {
     @GET("share/knowledgeBase/v1/findDiseaseKnowledge")
     Observable<PatientBean> getPatien(@Query("id") int Id);
 
+    //药品科目分类列表查询
     @GET("share/knowledgeBase/v1/findDrugsCategoryList")
     Observable<DrugsBean> getDrugs();
+
+    //根据药品类目查询常见药品
+    @GET("share/knowledgeBase/v1/findDrugsKnowledgeList")
+    Observable<DrugssBean> getDrugss(@Query("drugsCategoryId") int drugsCategoryId,@Query("page") int page,@Query("count") int count);
 }

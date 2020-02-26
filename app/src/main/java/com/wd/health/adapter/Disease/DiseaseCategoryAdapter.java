@@ -41,7 +41,7 @@ public class DiseaseCategoryAdapter extends RecyclerView.Adapter<DiseaseCategory
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context, PatientActivity.class);
-                intent.putExtra("id",resultBean.getId());
+                intent.putExtra("id1",resultBean.getId());
                 context.startActivity(intent);
             }
         });

@@ -2,6 +2,7 @@ package com.wd.health.model;
 
 
 import com.wd.health.bean.DrugsBean;
+import com.wd.health.bean.DrugssBean;
 import com.wd.health.contract.DrugsContract;
 import com.wd.health.utils.CommonObserver;
 import com.wd.health.utils.CommonSchedulers;
@@ -24,4 +25,24 @@ public class DrugsModel implements DrugsContract.IModel {
                     }
                 });
     }
+
+    @Override
+    public void getDrugss(int drugsCategoryId, int page, int count, DrugssCallBack drugssCallBack) {
+        RetrofitManager.getInstance().create()
+                .getDrugss(drugsCategoryId,page,count)
+                .compose(CommonSchedulers.io2main())
+                .subscribe(new CommonObserver<DrugssBean>() {
+                    @Override
+                    public void onNext(DrugssBean drugssBean) {
+                        drugssCallBack.DrugssSuccess(drugssBean);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        drugssCallBack.DrugssErorr(e.getMessage());
+                    }
+                });
+    }
+
+
 }

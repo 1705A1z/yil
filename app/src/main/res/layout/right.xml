@@ -110,6 +110,7 @@
                 android:gravity="center"
                 android:textColor="#f2f2f2"
                 android:text="我"
+
                 android:textSize="17sp"
                 android:textStyle="bold"
                 />
