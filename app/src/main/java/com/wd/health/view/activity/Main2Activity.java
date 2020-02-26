@@ -9,7 +9,6 @@ import android.widget.RadioGroup;
 
 import com.wd.health.R;
 import com.wd.health.fragment.CircleOfFriendsFragment;
-import com.wd.health.fragment.MyFragment;
 import com.wd.health.fragment.ShowFragment;
 
 import java.util.ArrayList;

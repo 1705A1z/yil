@@ -5,12 +5,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.RelativeLayout;
 
-/**
- * Created by dingmouren
- * email: naildingmouren@gmail.com
- * github: https://github.com/DingMouRen
- */
-
 public class InterceptRelativeLayout extends RelativeLayout {
 
     private boolean mIntercept = true;
